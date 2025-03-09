@@ -92,7 +92,7 @@ jobs:
               --role arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/my-lambda-role
       - name: Wait 30 seconds
         run: sleep 30
-      - name: Destroy test function
+      - name: Destroy test function 
         if: ${{ always() }}
         run: aws lambda delete-function --function-name test-function
 
